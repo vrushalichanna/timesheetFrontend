@@ -1,0 +1,22 @@
+.page-footer {
+    background-color: #084E8C;
+    color: #ffffffc4;
+}
+
+.page-footer a {
+    color: #ffffffc4;
+    text-decoration: none;
+}
+
+hr {
+    border-top: 1px solid rgba(126, 113, 181, 0.81);
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: red; */
+    color: white;
+    text-align: center;
+ }

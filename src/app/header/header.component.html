@@ -1,0 +1,59 @@
+<nav [ngClass]="{'hideTransition': headerDisplay}" class=" shownav navbar navbar-expand-sm navbar-fixed-top">
+  <div class="offset-lg-1 container navbar">
+    <!-- <div>
+      <button pButton type="button" (click)="visibleSidebar1 = true" label="Close" class="ui-button-secondary"></button>
+    </div> -->
+      <h2>
+          <a class="navbar-brand text-uppercase" style="color:#49A5AB" routerLink=""><img src="/assets/logintop2.png"
+          
+          
+            id="logo-container" class="child"
+            style="padding: 15px;background-color: #333;"></a>
+      </h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon">
+        <i class="fas fa-bars text-white"></i>
+    </span>
+  </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+          <!-- <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="vehiclelist">HOME</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  routerLink="/mechanic">EVENT</a>
+
+              </li>
+              <li class="nav-item dropdown" [routerLinkActive]="['active']">
+                <a class="nav-link dropdown-toggle"  href="#" id="navbardrop" data-toggle="dropdown">SERVICES</a>
+                <div class="dropdown-content">
+                    <li><a routerLink="/stock">Stock Details</a></li>
+                    <li><a routerLink="/stock-inword">Stock-In</a></li>
+                    <li><a routerLink="/stock-out">Stock-Out</a></li>
+                </div>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link"  routerLink="/worklist">ABOUT</a>
+
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"  routerLink="/jobList">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  routerLink="/jobList"><i class="fas fa-search"></i></a>
+            </li>
+          </ul> -->
+          <div class="row offset-sm-3 offset-md-3 offset-lg-10 text-right">
+                        
+            <ul class="list-inline list-socials navbar-nav">
+                <li class="nav-item"><div class="text-wrapper"><a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="loggedInUser"><i class="fas fa-user"></i></a></div></li>
+              <li><div class="text-wrapper nav-item ">
+              <a href="http://www.facebook.com/Innovecture"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook"><i class="fab fa-facebook-f"></i></a></div></li>
+            <li class="nav-item"><div class="text-wrapper"><a href="http://www.linkedin.com/company/innovecture-llc/" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="linkedin"><i class="fab fa-linkedin-in"></i></a></div></li>
+            <li class="nav-item"><div class="text-wrapper"><a href="http://www.twitter.com/Innovecture"  data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter"><i class="fab fa-twitter"></i></a></div></li></ul>
+         
+          </div>
+      </div>
+  </div>
+</nav>

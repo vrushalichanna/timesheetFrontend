@@ -1,0 +1,123 @@
+/* header fade-in fade-out */
+
+.shownav {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    /* transition: hideTransition 2s; */
+    transition: visibility 2s, opacity 0.5s linear;
+}
+
+.hideTransition {
+    /* position: relative; */
+    visibility: hidden;
+    opacity: 0;
+}
+
+.scroll-top {
+    top: 0;
+}
+
+.scroll-bottom {
+    top: -50px;
+}
+
+
+/* /// */
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    text-align: center;
+}
+
+.navbar .navbar-nav a:hover,
+.navbar-nav a:focus,
+.navbar-nav a:active,
+.navbar-nav a:visited {
+    /* border-bottom:2px solid red;
+    border-radius:10px;
+    color:orange;
+   animation:  myborder 1s; */
+    /* animation-iteration-count: infinite; */
+    border-radius: 10px;
+    background-color: black;
+    color: #49A4AB;
+}
+
+@keyframes myborder {
+    0% {
+        border-bottom: red;
+        left: 0px;
+    }
+    100% {
+        border-bottom: red;
+        left: 10px;
+    }
+}
+
+.navbar .nav-item a {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    /* border: 2px solid #222222; */
+    height: 50px;
+    margin: 10px;
+}
+
+
+/* .navbar .nav-item a,
+.navbar h2 a{
+   
+} */
+
+.navbar {
+    padding: 0;
+    background-color: #222222;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}
+.list-socials {
+    margin-bottom: 0;
+}
+header .text-wrapper:last-child {
+    padding-right: 0;
+}
+header .text-wrapper {
+    display: inline-block;
+    padding: 13px 20px 13px 0;
+    font-size: 14px;
+    line-height: 1;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    /* position: fixed; */
+    display: -webkit-box;
+    top: 0;
+    width: 100%;
+  }

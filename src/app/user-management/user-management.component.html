@@ -1,0 +1,196 @@
+<div
+  class="container-fluid"
+  style="width: 80%;
+height: 100%">
+  <div class="table-responsive">
+    <div
+      id="myTable_wrapper"
+      class="dataTables_wrapper no-footer">
+      <div class="row">
+        <div
+          id="myTable_filter"
+          class="dataTables_filter ml-4">
+          <label> Search: <input type="search" placeholder aria-controls="myTable"> </label>
+        </div>
+        <div
+          class="dataTables_length"
+          id="myTable_length">
+          <button type="button" (click)="addDialog()" data-toggle="modal" data-target="#add" title="Add User" style="float:right; margin-bottom: 5px;margin-left: 800px"> <span class="fa fa-plus"></span> </button>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead class="thead-light sorting">
+          <tr>
+            <th>Id</th>
+            <th>User Name</th>
+            <th>Email Id</th>
+            <th>Employee Id</th>
+            <th>Primary Contact No</th>
+            <th>Role</th>
+            <th>Default Project</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of data;let i= index">
+            <td>{{i}}</td>
+            <td>{{record.userName}}</td>
+            <td>{{record.userName}}</td>
+            <td>{{record.emailId}}</td>
+            <td>{{record.primaryContactNo}}</td>
+            <td>{{record.role}}</td>
+            <td>{{record.defaultProject}}</td>
+            <td>
+              <button type="button" class="edit_event m-1" (click)="confirm()" data-toggle="modal" data-target="#delete" title="Delete User" style="margin-bottom: 5px;"> <span class="fa fa-trash"></span> </button>
+              <button type="button" class="edit_event m-1" (click)="editDialog();" data-toggle="modal" data-target="#edit" title="Edit User" style="margin-bottom: 5px;"> <span class="fa fa-edit"></span> </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- #################### ADD User ######################### -->
+<form [formGroup]="userForm">
+<p-dialog [(visible)]="display1">
+  <p-header>Add New User</p-header>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>User Name</label>
+        <input type="text" class="form-control" placeholder="Name" formControlName="userName">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Email Id</label>
+        <input type="text" class="form-control" placeholder="EmailId" formControlName="emailId">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employee Id</label>
+        <input type="text" class="form-control" placeholder="Employee Id" formControlName="employeeId">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Primery Phone No</label>
+        <input type="text" class="form-control" placeholder="Primery No" formControlName="primaryContactNo">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Secondary No</label>
+        <input type="text" class="form-control" placeholder="Secondary No" formControlName="secondaryContactNo">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Emergency Contact No</label>
+        <input type="text" class="form-control" placeholder="Emergency Contact No" formControlName="emergencyContactNo">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Role</label>
+        <input type="text" class="form-control" placeholder="role" formControlName="role">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Default Project</label>
+        <input type="text" class="form-control" placeholder="Default Project" formControlName="defaultProject">
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <button type="button" pButton icon="pi pi-info-circle" label="Submit"> </button>
+
+  </p-footer>
+</p-dialog>
+</form>
+
+<!-- ######################## Edit User ################################# -->
+<form [formGroup]="userForm">
+<p-dialog [(visible)]="display">
+  <p-header>Edit User</p-header>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>User Name</label>
+        <input type="text" class="form-control" placeholder="Name" formControlName="userName">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Email Id</label>
+        <input type="text" class="form-control"
+          placeholder="EmailId" formControlName="emailId">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Employee Id</label>
+        <input type="text" class="form-control" placeholder="Employee Id" formControlName="employeeId">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Primery Phone No</label>
+        <input type="text" class="form-control" placeholder="Primery No" formControlName="primaryContactNo">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Secondary No</label>
+        <input type="text" class="form-control" placeholder="Secondary No" formControlName="secondaryContactNo">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Emergency Contact No</label>
+        <input type="text" class="form-control" placeholder="Emergency Contact No" formControlName="emergencyContactNo">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Role</label>
+        <input type="text" class="form-control" placeholder="role" formControlName="role"> </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Default Project</label>
+        <input type="text" class="form-control" placeholder="Default Project" formControlName="defaultProject">
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-info-circle"
+      label="Submit">
+    </button>
+
+  </p-footer>
+</p-dialog>
+</form>
+
+<!-- <p-confirmDialog  icon="pi pi-exclamation-triangle"></p-confirmDialog>
+
+<button type="text" (click)="confirm()" pButton icon="pi pi-check" label="Confirm"></button> -->

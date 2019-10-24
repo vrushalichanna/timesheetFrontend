@@ -1,0 +1,12 @@
+[
+    {
+        "userName": "admin",
+        "emailId": "admin",
+        "primaryContactNo": 909900990,
+        "role": "admin",
+        "defaultProject": "User Management",
+        "employeeId":"123455",
+        "secondaryNumber":9876523556,
+        "emergencyContactNo":325353753
+    }
+]

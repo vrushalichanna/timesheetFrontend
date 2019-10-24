@@ -1,0 +1,18 @@
+.dataTable{
+    margin: 0 auto;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    border: 1px solid #f1f2f7;
+}
+.table-responsive{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width:100%;
+}
+body .ui-dialog .ui-dialog-content{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
